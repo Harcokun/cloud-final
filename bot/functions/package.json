@@ -16,8 +16,10 @@
     "@line/bot-sdk": "^7.5.2",
     "axios": "^1.4.0",
     "csv-parser": "^3.0.0",
+    "dotenv": "^16.0.3",
     "firebase-admin": "^11.7.0",
-    "firebase-functions": "^4.3.1"
+    "firebase-functions": "^4.3.1",
+    "web-audio-api": "^0.2.2"
   },
   "devDependencies": {
     "firebase-functions-test": "^3.0.0"

@@ -1,0 +1,144 @@
+{
+    "type": "flex",
+    "altText": "Q1. What is the capital of Japan?",
+    "contents": {
+      "type": "bubble",
+      "body": {
+        "type": "box",
+        "layout": "vertical",
+        "spacing": "md",
+        "contents": [
+          {
+            "type": "box",
+            "layout": "vertical",
+            "contents": [
+              {
+                "type": "text",
+                "text": "Q",
+                "align": "center",
+                "size": "xxl",
+                "weight": "bold"
+              },
+              {
+                "type": "text",
+                "text": "What is the capital of Japan?",
+                "wrap": true,
+                "weight": "bold",
+                "margin": "lg"
+              }
+            ]
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "box",
+            "layout": "vertical",
+            "margin": "lg",
+            "contents": [
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "1.",
+                    "flex": 1,
+                    "size": "lg",
+                    "weight": "bold",
+                    "color": "#666666"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Tokyo",
+                    "wrap": true,
+                    "flex": 9
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "2.",
+                    "flex": 1,
+                    "size": "lg",
+                    "weight": "bold",
+                    "color": "#666666"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Osaka",
+                    "wrap": true,
+                    "flex": 9
+                  }
+                ]
+              },
+              {
+                "type": "box",
+                "layout": "baseline",
+                "contents": [
+                  {
+                    "type": "text",
+                    "text": "3.",
+                    "flex": 1,
+                    "size": "lg",
+                    "weight": "bold",
+                    "color": "#666666"
+                  },
+                  {
+                    "type": "text",
+                    "text": "Kyoto",
+                    "wrap": true,
+                    "flex": 9
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "footer": {
+        "type": "box",
+        "layout": "horizontal",
+        "spacing": "sm",
+        "contents": [
+          {
+            "type": "button",
+            "style": "primary",
+            "height": "sm",
+            "action": {
+              "type": "postback",
+              "label": "1",
+              "data": "1",
+              "displayText": "Tokyo"
+            }
+          },
+          {
+            "type": "button",
+            "style": "primary",
+            "height": "sm",
+            "action": {
+              "type": "postback",
+              "label": "2",
+              "data": "2",
+              "displayText": "Osaka"
+            }
+          },
+          {
+            "type": "button",
+            "style": "primary",
+            "height": "sm",
+            "action": {
+              "type": "postback",
+              "label": "3",
+              "data": "3",
+              "displayText": "Kyoto"
+            }
+          }
+        ]
+      }
+    }
+  } 
