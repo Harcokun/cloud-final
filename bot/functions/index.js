@@ -80,7 +80,7 @@ exports.lineBot = functions.region(region).https.onRequest(async (req, res) => {
             "Incorrect answer! The correct answer is " + correctTextChoice;
           await axios({
             method: "get",
-            url: "https://qgmochpzka.execute-api.ap-northeast-1.amazonaws.com/default/PollyLex_quiz",
+            url: process.env.AWS_POLLY_ENDPOINT,
             data: JSON.stringify({
               operation: "polly",
               name: "incorrect_q" + randomIdx + ".m4a",
