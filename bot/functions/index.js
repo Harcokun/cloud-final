@@ -6,9 +6,6 @@ const axios = require("axios");
 const { Client } = require("@line/bot-sdk");
 const csv = require("csv-parser");
 const fs = require("fs");
-const waa = require("web-audio-api");
-const ffmpeg = require('fluent-ffmpeg');
-const { PassThrough } = require('stream');
 
 const region = "asia-southeast1";
 
@@ -18,50 +15,10 @@ const config = {
 };
 
 const client = new Client(config);
-const audioContext = new waa.AudioContext();
 
 const questions = [];
 var correctIdxAnswer = "1";
 var randomIdx = 0;
-
-// const getAudioDuration = async (url) => {
-//   const response = await axios.get(url, { responseType: "arraybuffer" });
-//   console.log("Response from audioURL: ", response.data);
-//   const audioBuffer = await audioContext.decodeAudioData(bufferToArrayBuffer(response.data))
-//   console.log("audioBuffer: ", audioBuffer);
-//   const duration = audioBuffer.duration;
-//   return duration;
-// };
-
-// const bufferToArrayBuffer = (buffer) => {
-//   const arrayBuffer = new ArrayBuffer(buffer.length);
-//   const uint8Array = new Uint8Array(arrayBuffer);
-//   for (let i = 0; i < buffer.length; i++) {
-//     uint8Array[i] = buffer[i];
-//   }
-//   return arrayBuffer;
-// }
-
-// const getAudioDuration = async (url) => {
-//   const outputStream = new PassThrough();
-//   const command = ffmpeg(url)
-//     .format('s16le') // output format: signed 16-bit little-endian PCM
-//     .audioCodec('pcm_s16le') // audio codec: signed 16-bit little-endian PCM
-//     .noVideo() // exclude video stream
-//     .output(outputStream);
-  
-//   await new Promise((resolve, reject) => {
-//     command.on('end', resolve);
-//     command.on('error', reject);
-//     command.run();
-//   });
-
-//   const audioData = outputStream.read();
-//   const audioBuffer = await audioContext.decodeAudioData(audioData);
-//   console.log("audioBuffer: ", audioBuffer);
-//   const duration = audioBuffer.duration;
-//   return duration;
-// };
 
 fs.createReadStream("question_list.csv")
   .pipe(csv({ headers: false }))
